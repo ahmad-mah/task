@@ -30,4 +30,9 @@ abstract class AppStrings {
 
   // Product
   static const String pricePrefix = "ج";
+
+  // Error and Empty States
+  static const String noBannersAvailable = "No banners available";
+  static const String noProductsAvailable = "No products available";
+  static const String noServicesAvailable = "No services available";
 }

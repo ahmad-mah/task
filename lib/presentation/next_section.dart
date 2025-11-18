@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/widgets/styled_list_view_item.dart';
+import '../core/widgets/styled_list_view_item.dart';
 
 import '../core/utils/app_strings.dart';
 import '../core/widgets/header_list_view.dart';

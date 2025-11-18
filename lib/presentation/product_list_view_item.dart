@@ -1,11 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/utils/app_colors.dart';
-import 'package:test_app/core/utils/app_strings.dart';
-import 'package:test_app/core/utils/app_styles.dart';
+
 
 import '../../data/models/product_model.dart';
+import '../core/utils/app_colors.dart';
+import '../core/utils/app_strings.dart';
+import '../core/utils/app_styles.dart';
 
 class ProductListViewItem extends StatelessWidget {
   const ProductListViewItem({super.key, required this.product});

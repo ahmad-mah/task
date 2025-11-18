@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_strings.dart';
 import '../core/utils/app_styles.dart';
+import '../core/widgets/styled_loading.dart';
 import '../data/models/banner_model.dart';
 import 'providers/home_provider.dart';
 
@@ -14,22 +15,58 @@ class BannersSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final banners = context.read<HomeProvider>().banners;
+    return Consumer<HomeProvider>(
+      builder: (context, provider, child) {
+        if (provider.isLoading) {
+          return SizedBox(
+            height: 120.h,
+            child: const Center(child: StyledLoading()),
+          );
+        }
 
-    return Column(
-      children: [
-        SizedBox(
-          height: 120.h,
-          child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            itemCount: banners.length,
-            itemBuilder: (context, index) {
-              return BannerListViewItem(banners: banners, index: index);
-            },
-            separatorBuilder: (context, index) => SizedBox(width: 10.w),
-          ),
-        ),
-      ],
+        if (provider.errorMessage != null) {
+          return SizedBox(
+            height: 120.h,
+            child: Center(
+              child: Text(
+                provider.errorMessage!,
+                style: AppStyles.font16W400Black,
+                textAlign: TextAlign.center,
+              ),
+            ),
+          );
+        }
+
+        final banners = provider.banners;
+
+        if (banners.isEmpty) {
+          return SizedBox(
+            height: 120.h,
+            child: Center(
+              child: Text(
+                AppStrings.noBannersAvailable,
+                style: AppStyles.font16W400Black,
+              ),
+            ),
+          );
+        }
+
+        return Column(
+          children: [
+            SizedBox(
+              height: 120.h,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemCount: banners.length,
+                itemBuilder: (context, index) {
+                  return BannerListViewItem(banners: banners, index: index);
+                },
+                separatorBuilder: (context, index) => SizedBox(width: 10.w),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

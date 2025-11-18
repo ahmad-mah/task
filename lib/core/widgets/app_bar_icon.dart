@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/utils/app_colors.dart';
+
+import '../utils/app_colors.dart';
 
 class AppBarIcon extends StatelessWidget {
   const AppBarIcon(this.icon, {super.key, this.onTap});
