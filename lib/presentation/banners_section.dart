@@ -7,7 +7,7 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/app_strings.dart';
 import '../core/utils/app_styles.dart';
 import '../data/models/banner_model.dart';
-import '../data/providers/home_provider.dart';
+import 'providers/home_provider.dart';
 
 class BannersSection extends StatelessWidget {
   const BannersSection({super.key});

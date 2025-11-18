@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../core/utils/app_strings.dart';
 import '../core/widgets/header_list_view.dart';
-import '../data/providers/home_provider.dart';
+import 'providers/home_provider.dart';
 import 'service_list_view_item.dart';
 
 class NewServicesSection extends StatelessWidget {

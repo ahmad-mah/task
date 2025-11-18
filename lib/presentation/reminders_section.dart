@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../core/utils/app_strings.dart';
 import '../core/widgets/header_list_view.dart';
 import '../core/widgets/styled_list_view_item.dart';
 
@@ -12,7 +11,7 @@ class RemindersSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        HeaderListView(title: AppStrings.myReminders, onViewAllPressed: () {}),
+        HeaderListView(title: "تذكيراتي", onViewAllPressed: () {}),
         SizedBox(
           height: 120.h,
           child: ListView.separated(

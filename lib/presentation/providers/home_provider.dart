@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../../data/models/banner_model.dart';
+import '../../data/models/product_model.dart';
+import '../../data/models/service_model.dart';
+import '../../data/repository/home_repository.dart';
 
-import '../models/banner_model.dart';
-import '../models/product_model.dart';
-import '../models/service_model.dart';
-import '../repository/home_repository.dart';
+
+
 
 class HomeProvider extends ChangeNotifier {
   final HomeRepository _repository = HomeRepositoryImpl();

@@ -5,7 +5,7 @@ import 'package:test_app/core/widgets/product_list_view_item.dart';
 
 import '../core/utils/app_strings.dart';
 import '../core/widgets/header_list_view.dart';
-import '../data/providers/home_provider.dart';
+import 'providers/home_provider.dart';
 
 class ProductsSection extends StatelessWidget {
   const ProductsSection({super.key});

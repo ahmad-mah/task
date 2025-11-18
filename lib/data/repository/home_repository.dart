@@ -3,12 +3,13 @@ import 'package:dio/dio.dart';
 
 
 
+import '../../core/network/api_constants.dart';
+import '../../core/network/api_service.dart';
+import '../../core/network/failure.dart';
 import '../models/banner_model.dart';
 import '../models/product_model.dart';
 import '../models/service_model.dart';
-import '../network/api_constants.dart';
-import '../network/api_service.dart';
-import '../network/failure.dart';
+
 
 abstract class HomeRepository {
   Future<Either<Failure, List<BannerModel>>> getBanners();
