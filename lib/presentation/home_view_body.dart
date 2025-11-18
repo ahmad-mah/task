@@ -17,6 +17,7 @@ class HomeViewBody extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           spacing: 30.h,
           children: [
